@@ -13,12 +13,11 @@ def pedirNumeroAlumno():
 def imprimirMatriz(archivo, numeroAlumno):
   data = pd.read_excel(archivo)
 
-  # Convertir el DataFrame a una lista
+
   lista = [data.columns.values.tolist()] + data.values.tolist()
 
   for fila in lista:
     for elemento in fila:
-      # Convertir el elemento a string y alinearlo a la izquierda
       elementoStr = str(elemento).ljust(10)
       if elemento == int(numeroAlumno):
         print(f'\033[31m{elementoStr}\033[0m', end=' ')
@@ -26,9 +25,6 @@ def imprimirMatriz(archivo, numeroAlumno):
         print(elementoStr, end=' ')
     print()
 
-# Uso de la función
-print()
-# Uso de la función
 def agregaNodos(currentNodo, nuevoNumero):
     cola = []
     cola.append(currentNodo)
