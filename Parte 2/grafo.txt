@@ -1,15 +1,15 @@
 1. ¿Dirigido o no dirigido?
-No es dirigido ya que las aristas no tienen una flecha de direccion
+No es dirigido ya que las aristas no tienen una flecha de dirección
 2.¿Tiene bucles?
-
+No
 3.¿Es ponderado o no ponderado?
 Si es ponderado ya que las aristas tienen un peso y esto indica que el grafo es ponderado
 4.¿Cuantos vertices tiene?
 8
 5.¿Cuantas aristas tiene?
 16
-6.¿Cual es el nodo raiz?
-
+6.¿Cual es el nodo raíz?
+E
 
 Matriz de adyacencia:
   A B C D E F G H 
@@ -21,7 +21,7 @@ E 0 1 1 1 0 1 1 0
 F 0 0 1 1 1 0 0 0
 G 0 0 1 0 1 0 0 1
 H 1 1 0 1 0 0 1 0 
-Si es simetrica
+Si es simétrica
 
 Lista de relaciones
 A: B, C, D, H
