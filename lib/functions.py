@@ -7,27 +7,26 @@ preOrder = []
 postOrder = []
 
 def pedirNumeroAlumno():
-  numeroAlumno = input('Cuál es mi número? ')
-  return numeroAlumno
+    numeroAlumno = input('Cuál es mi número? ')
+    return numeroAlumno
 
 def pedirArchivo():
-  archivo = input('Cual es el nombre del archivo a procesar? ')
-  return archivo
+    archivo = input('Cual es el nombre del archivo a procesar? ')
+    return archivo
 
 def imprimirMatriz(archivo, numeroAlumno):
-  data = pd.read_excel(archivo)
+    data = pd.read_excel(archivo)
 
 
-  lista = [data.columns.values.tolist()] + data.values.tolist()
+    lista = [data.columns.values.tolist()] + data.values.tolist()
 
-  for fila in lista:
-    for elemento in fila:
-      elementoStr = str(elemento).ljust(10)
-      if elemento == int(numeroAlumno):
-        print(f'\033[31m{elementoStr}\033[0m', end=' ')
-      else:
-        print(elementoStr, end=' ')
-    print()
+    for fila in lista:
+        for elemento in fila:
+            elementoStr = str(elemento).ljust(10)
+            if elemento == int(numeroAlumno):
+                print(f'\033[31m{elementoStr}\033[0m', end=' ')
+            else:
+                print(elementoStr, end=' ') 
 
 def agregaNodos(currentNodo, nuevoNumero):
     cola = []
@@ -57,13 +56,13 @@ def printArbol(Nodo):
     return 0  
   
 def arbolOrdenado(archivo):
-  data = pd.read_excel(archivo)
-  numeros = data.columns.values.tolist() + [item for sublist in data.values.tolist() for item in sublist]
-  nodoRaiz = nodo(numeros[0])
-  for i in range(1, len(numeros),1):
-    agregaNodos(nodoRaiz, numeros[i])
-  printArbol(nodoRaiz)
-  return nodoRaiz
+    data = pd.read_excel(archivo)
+    numeros = data.columns.values.tolist() + [item for sublist in data.values.tolist() for item in sublist]
+    nodoRaiz = nodo(numeros[0])
+    for i in range(1, len(numeros),1):
+        agregaNodos(nodoRaiz, numeros[i])
+    printArbol(nodoRaiz)
+    return nodoRaiz
 
 def LVR(Nodo, arr):
 
@@ -113,10 +112,10 @@ def nodosOrdenados(nodoPadre, newNodo):
     pass
   
 def arbolNumOrdenado(archivo, nodoRaiz):
-  data = pd.read_excel(archivo)
-  numeros = data.columns.values.tolist() + [item for sublist in data.values.tolist() for item in sublist]
-  primerNodo = nodo(nodoRaiz)
-  for i in range(1, len(numeros),1):
-    nodosOrdenados(primerNodo, nodo(numeros[i-1]))
-  printArbol(primerNodo)
-  return primerNodo
+    data = pd.read_excel(archivo)
+    numeros = data.columns.values.tolist() + [item for sublist in data.values.tolist() for item in sublist]
+    primerNodo = nodo(nodoRaiz)
+    for i in range(1, len(numeros),1):
+        nodosOrdenados(primerNodo, nodo(numeros[i-1]))
+    printArbol(primerNodo)
+    return primerNodo
