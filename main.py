@@ -2,7 +2,7 @@ from lib import *
 
 numeroAlumno = pedirNumeroAlumno()
 nodoRaiz2 = int(numeroAlumno)
-archivo = input('Cual es el nombre del archivo a procesar? ')#Usar ruta de acceso
+archivo = pedirArchivo()
 print('')
 print('Números en archivo, el rojo es mi número:')
 imprimirMatriz(archivo, numeroAlumno)

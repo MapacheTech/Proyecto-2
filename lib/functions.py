@@ -10,6 +10,10 @@ def pedirNumeroAlumno():
   numeroAlumno = input('Cuál es mi número? ')
   return numeroAlumno
 
+def pedirArchivo():
+  archivo = input('Cual es el nombre del archivo a procesar? ')
+  return archivo
+
 def imprimirMatriz(archivo, numeroAlumno):
   data = pd.read_excel(archivo)
 
