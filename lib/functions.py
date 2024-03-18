@@ -16,10 +16,7 @@ def pedirArchivo():
 
 def imprimirMatriz(archivo, numeroAlumno):
     data = pd.read_excel(archivo)
-
-
     lista = [data.columns.values.tolist()] + data.values.tolist()
-
     for fila in lista:
         for elemento in fila:
             elementoStr = str(elemento).ljust(10)
@@ -33,8 +30,7 @@ def agregaNodos(currentNodo, nuevoNumero):
     cola.append(currentNodo)
     
     while cola:          
-        currentNodo = cola.pop(0)
-        
+        currentNodo = cola.pop(0)        
         if currentNodo.izq is None:
             currentNodo.izq = nodo(nuevoNumero)
             return 0
