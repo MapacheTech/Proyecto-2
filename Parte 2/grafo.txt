@@ -1,7 +1,8 @@
 1. ¿Dirigido o no dirigido?
 No es dirigido ya que las aristas no tienen una flecha de dirección
 2.¿Tiene bucles?
-No
+Si tiene bucles ya que hay varios ciclos formados por vertices y aristas que sin un método aplicado podrían ser bucles,
+pero al momento de aplicar algún método de los vistos en clase ya no habría bucles
 3.¿Es ponderado o no ponderado?
 Si es ponderado ya que las aristas tienen un peso y esto indica que el grafo es ponderado
 4.¿Cuantos vertices tiene?
@@ -9,7 +10,7 @@ Si es ponderado ya que las aristas tienen un peso y esto indica que el grafo es 
 5.¿Cuantas aristas tiene?
 16
 6.¿Cual es el nodo raíz?
-E
+Es necesario aplicar un método para poder saber el nodo raíz. 
 
 Matriz de adyacencia:
   A B C D E F G H 
