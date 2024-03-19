@@ -19,11 +19,12 @@ def imprimirMatriz(archivo, numeroAlumno):
     lista = [data.columns.values.tolist()] + data.values.tolist()
     for fila in lista:
         for elemento in fila:
-            elementoStr = str(elemento).ljust(10)
+            elementoStr = str(elemento).ljust(15)  
             if elemento == int(numeroAlumno):
                 print(f'\033[31m{elementoStr}\033[0m', end=' ')
             else:
-                print(elementoStr, end=' ') 
+                print(elementoStr, end=' ')
+        print()  
 
 def agregaNodos(currentNodo, nuevoNumero):
     cola = []
