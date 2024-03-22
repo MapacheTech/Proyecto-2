@@ -77,8 +77,8 @@ def VLR(Nodo, arr):
     if Nodo is not None:
         nodoPadre = Nodo
         arr.append(nodoPadre.valor)
-        LVR(nodoPadre.izq, arr)        
-        LVR(nodoPadre.der, arr)
+        VLR(nodoPadre.izq, arr)        
+        VLR(nodoPadre.der, arr)
     else:
         pass
     
@@ -87,8 +87,8 @@ def VLR(Nodo, arr):
 def LRV(Nodo, arr):
     if Nodo is not None:
         nodoPadre = Nodo
-        LVR(nodoPadre.izq, arr)        
-        LVR(nodoPadre.der, arr)
+        LRV(nodoPadre.izq, arr)        
+        LRV(nodoPadre.der, arr)
         arr.append(nodoPadre.valor)        
     else:
         pass
